@@ -1,4 +1,5 @@
--- the witty cartesian join on a table to itself to find the first or last element
+-- The witty cartesian join on a table to itself to find the first or last element
+-- I believe this is unofficially dubbed the "theta" join
 
 -- table a
 -- values: 1, 2, 3
@@ -36,7 +37,7 @@ where a_theta.id is null
 |    3 |    2 |
 +------+------+
 
--- Since we are "a" the first table in a left join, ALL values in "a" must be present.
+-- Since "a" is the first table in a left join, ALL values in "a" must be present.
 -- With the where clause, this yields:
 
 > select a.id, a_theta.id
