@@ -1,7 +1,18 @@
 #!/usr/bin/perl
 
+# Author: Norbinn Rodrigo
+# Usage: $ perl multi_level_sort.pl
+# Input file: ./random_domain_names.txt
+# Output file: ./sorted_output.txt
+
 use strict;
 use Data::Dumper;
+
+# The following modules were used to pull top-level domain information
+# Domain::PublicSuffix contains 2 public subs: tld() and suffix()
+#   tld() pulls the base tld: site.co.uk -> uk
+# Per the requirements of the problem:
+#   suffix() pulls: site.co.uk -> co.uk
 use lib '/Library/Perl/5.12';
 use URI                  qw( );
 use Domain::PublicSuffix qw( );
